@@ -1,1 +1,30 @@
-[{"h":1080,"name":"1-cover.jpg","query":"?shot=cover&size=1920x1080&caption=Vice%20City%20Heat&sub=One%20city.%20No%20brakes.","shows":"Exported cover, wide size: Sunset Grid layout (hero + 4 panels), Sunset grade, bold caption lettering","w":1920},{"h":800,"name":"2-editor.jpg","query":"?shot=editor","shows":"The editor in a browser with the demo photos loaded: controls on the left, live cover preview on the right","w":1280},{"h":1350,"name":"3-cover-portrait.jpg","query":"?shot=cover&size=1080x1350&layout=strip&grade=neon&caption=Neon%20Strip%20Nights&sub=Five%20panels.%20One%20legend.","shows":"Exported cover, portrait size: Neon Strip layout, Neon Nights grade","w":1080},{"h":1080,"name":"4-cover-square.jpg","query":"?shot=cover&size=1080x1080&layout=duo&grade=vice&caption=Vice%20Duo&sub=Two%20sides%20of%20the%20city","shows":"Exported cover, square size: Vice Duo layout, Vice Pink grade","w":1080}]
+[
+  {
+    "h": 1080,
+    "name": "1-cover.jpg",
+    "query": "?shot=cover&size=1920x1080&caption=Vice%20City%20Heat&sub=One%20city.%20No%20brakes.",
+    "shows": "Exported cover, wide size: Sunset Grid layout (hero + 4 panels), Sunset grade, bold caption lettering",
+    "w": 1920
+  },
+  {
+    "h": 800,
+    "name": "2-editor.jpg",
+    "query": "?shot=editor",
+    "shows": "The editor in a browser with the demo photos loaded: controls on the left, live cover preview on the right",
+    "w": 1280
+  },
+  {
+    "h": 1350,
+    "name": "3-cover-portrait.jpg",
+    "query": "?shot=cover&size=1080x1350&layout=strip&grade=neon&caption=Neon%20Strip%20Nights&sub=Five%20panels.%20One%20legend.&panels=1,0,2,0,1",
+    "shows": "Exported cover, portrait size: Neon Strip layout, Neon Nights grade",
+    "w": 1080
+  },
+  {
+    "h": 1080,
+    "name": "4-cover-square.jpg",
+    "query": "?shot=cover&size=1080x1080&layout=duo&grade=vice&caption=Vice%20Duo&sub=Two%20sides%20of%20the%20city&panels=0,2",
+    "shows": "Exported cover, square size: Vice Duo layout (portrait + boulevard panels), Vice Pink grade",
+    "w": 1080
+  }
+]

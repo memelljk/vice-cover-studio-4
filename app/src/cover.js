@@ -14,7 +14,7 @@ export const GRADES = {
   },
   neon: {
     label: 'Neon Nights',
-    stops: [[0, '#02021a'], [0.3, '#14237d'], [0.55, '#8e24aa'], [0.78, '#00b8d4'], [1, '#e0f7fa']],
+    stops: [[0, '#05052e'], [0.3, '#27349e'], [0.55, '#b03ae0'], [0.78, '#00d5f5'], [1, '#e0f7fa']],
     tint: 'rgba(0,229,255,0.08)',
   },
   vice: {
@@ -93,7 +93,7 @@ function processPanel(ctx, w, h, opts) {
   const img = ctx.getImageData(0, 0, w, h);
   const d = img.data;
   const lum = new Float32Array(w * h);
-  const levels = 6;
+  const levels = 5;
   for (let i = 0, p = 0; i < d.length; i += 4, p++) {
     // posterize each channel first: flattens photo detail into poster bands
     for (let ch = 0; ch < 3; ch++) {
@@ -118,7 +118,7 @@ function processPanel(ctx, w, h, opts) {
     const l = Math.max(0, Math.min(255, Math.round(lum[p])));
     let r = lut[l * 3], gcol = lut[l * 3 + 1], b = lut[l * 3 + 2];
     // keep a slice of the posterized original hue so faces/objects stay readable
-    r = r * 0.72 + d[i] * 0.28; gcol = gcol * 0.72 + d[i + 1] * 0.28; b = b * 0.72 + d[i + 2] * 0.28;
+    r = r * 0.8 + d[i] * 0.2; gcol = gcol * 0.8 + d[i + 1] * 0.2; b = b * 0.8 + d[i + 2] * 0.2;
     const e = edge[p];
     if (e > 90) {
       const k = Math.max(0, 1 - outline * Math.min(1, (e - 90) / 160) * 0.92);
@@ -227,7 +227,7 @@ function drawCaption(ctx, w, h, state) {
     ctx.font = `400 ${Math.round(h * 0.16)}px ${family}`;
     if (ctx.measureText(caption).width > maxW || caption.length > 14) lines = best.lines;
   }
-  const size = Math.min(...lines.map((ln) => fitFont(ctx, ln, '400', Math.round(h * 0.17), maxW, family)));
+  const size = Math.min(...lines.map((ln) => fitFont(ctx, ln, '400', Math.round(h * 0.185), maxW, family)));
   const lineH = size * 1.04;
   const blockH = lineH * lines.length + (state.sub ? size * 0.52 : 0);
   const baseY = state.captionPos === 'top' ? h * 0.055 : h - h * 0.055 - blockH;
@@ -238,7 +238,7 @@ function drawCaption(ctx, w, h, state) {
     ctx.lineJoin = 'round';
     ctx.shadowColor = 'rgba(10,0,24,0.85)'; ctx.shadowBlur = 0;
     ctx.shadowOffsetX = size * 0.06; ctx.shadowOffsetY = size * 0.07;
-    ctx.lineWidth = size * 0.22; ctx.strokeStyle = '#0d0618';
+    ctx.lineWidth = size * 0.26; ctx.strokeStyle = '#0d0618';
     ctx.strokeText(ln, w / 2, y);
     ctx.shadowOffsetX = 0; ctx.shadowOffsetY = 0;
     const grad = ctx.createLinearGradient(0, y, 0, y + size);

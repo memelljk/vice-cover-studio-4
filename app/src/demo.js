@@ -86,7 +86,7 @@ function portrait() {
 // Demo 2: beach panorama with boardwalk and umbrella.
 function beach() {
   const c = canvas(1000, 800), x = c.getContext('2d');
-  sky(x, 1000, 800, [[0, '#0f2027'], [0.5, '#2c5364'], [0.72, '#ff9966'], [1, '#ff5e62']]);
+  sky(x, 1000, 800, [[0, '#27606e'], [0.5, '#3d7a8c'], [0.72, '#ff9966'], [1, '#ff5e62']]);
   sun(x, 720, 430, 130, '#ffe29f');
   sea(x, 1000, 470, 170, '#ff7e5f', '#203a43');
   x.fillStyle = '#f7d08a'; x.fillRect(0, 640, 1000, 160);
@@ -109,7 +109,7 @@ function beach() {
 // Demo 3: boulevard at dusk with a low sports car silhouette.
 function boulevard() {
   const c = canvas(1000, 800), x = c.getContext('2d');
-  sky(x, 1000, 800, [[0, '#12002f'], [0.55, '#5f0a87'], [0.8, '#ff2e88'], [1, '#ff9a3d']]);
+  sky(x, 1000, 800, [[0, '#2a1152'], [0.55, '#7d1bb0'], [0.8, '#ff2e88'], [1, '#ff9a3d']]);
   sun(x, 300, 470, 110, '#ffb347');
   // skyline
   x.fillStyle = '#160b33';

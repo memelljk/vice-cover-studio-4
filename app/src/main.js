@@ -47,6 +47,7 @@ async function boot() {
     if (q.get('grade')) { st.grade = q.get('grade'); els.grade.value = st.grade; }
     if (q.get('pos')) { st.captionPos = q.get('pos'); els.captionPos.value = st.captionPos; }
     if (q.get('halftone') === '1') st.halftone = true;
+    if (q.get('panels')) st.panelPhoto = q.get('panels').split(',').map(Number);
     st.selectedPanel = -1;
     editor.render();
     if (q.get('shot') === 'cover') {
